@@ -1,0 +1,117 @@
+---
+import Container from "./Container.astro"
+---
+<style>
+  .hidden-text {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 10; 
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+  }
+  .group:hover .hidden-text {
+    opacity: 1;
+  }
+  .group {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  .group img {
+    transition: transform 0.3s ease-in-out;
+  }
+  .group:hover img {
+    transform: scale(1.1); /* Efecto de zoom */
+  }
+  </style>
+<div id="blog">
+  <Container>
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 p-5">
+      <div data-aos="flip-up" class="group relative p-6 sm:p-8 rounded-3xl bg-white border border-gray-100 dark:shadow-none dark:border-gray-700 dark:bg-gray-800 bg-opacity-50 shadow-2xl shadow-gray-600/10">
+        <h1 class="text-center text-white absolute inset-0 flex items-center justify-center p-5">
+          SIGAD
+        </h1>
+        <p class="text-left text-white hidden-text absolute inset-0 flex items-center justify-center p-8 bg-black bg-opacity-70 rounded-3xl text-sm ">
+          SOFTWARE ESPECIALIZADO EN EL PROCESO DE RADICACIÓN DE LA DOCUMENTACIÓN INTERNA Y EXTERNA (FÍSICA Y ELECTRÓNICA) QUE PERMITE LA ASIGNACIÓN Y ENVIÓ DEL DOCUMENTO DIGITALIZADO A LA DEPENDENCIA CORRESPONDIENTE, MANEJANDO PRIORIDADES, ESTABLECIENDO ALERTAS DE TAL FORMA QUE LA OFICINA RECEPTORA CONOZCA INMEDIATAMENTE LA LLEGADA DE UN NUEVO DOCUMENTO Y CON ALARMAS CONSTANTES DE ACUERDO A LA PRIORIDAD DEL MISMO.
+        </p>
+        <div class="relative overflow-hidden rounded-xl">
+          <img src="/images/services/1.jpg"
+          alt="art cover" loading="lazy" width="1000" height="667" class="h-64 w-full object-cover object-top transition duration-500 group-hover:scale-105"/>
+        </div>
+      </div>
+      <div data-aos="flip-up" class="group relative p-6 sm:p-8 rounded-3xl bg-white border border-gray-100 dark:shadow-none dark:border-gray-700 dark:bg-gray-800 bg-opacity-50 shadow-2xl shadow-gray-600/10">
+        <h1 class="text-center text-white absolute inset-0 flex items-center justify-center p-5">
+          SIGAD
+        </h1>
+        <p class="text-left text-white hidden-text absolute inset-0 flex items-center justify-center p-8 bg-black bg-opacity-70 rounded-3xl text-sm ">
+          SOFTWARE ESPECIALIZADO EN EL PROCESO DE RADICACIÓN DE LA DOCUMENTACIÓN INTERNA Y EXTERNA (FÍSICA Y ELECTRÓNICA) QUE PERMITE LA ASIGNACIÓN Y ENVIÓ DEL DOCUMENTO DIGITALIZADO A LA DEPENDENCIA CORRESPONDIENTE, MANEJANDO PRIORIDADES, ESTABLECIENDO ALERTAS DE TAL FORMA QUE LA OFICINA RECEPTORA CONOZCA INMEDIATAMENTE LA LLEGADA DE UN NUEVO DOCUMENTO Y CON ALARMAS CONSTANTES DE ACUERDO A LA PRIORIDAD DEL MISMO.
+        </p>
+        <div class="relative overflow-hidden rounded-xl">
+          <img src="/images/services/2.jpg"
+          alt="art cover" loading="lazy" width="1000" height="667" class="h-64 w-full object-cover object-top transition duration-500 group-hover:scale-105"/>
+        </div>
+      </div>
+      <div data-aos="flip-up" class="group relative p-6 sm:p-8 rounded-3xl bg-white border border-gray-100 dark:shadow-none dark:border-gray-700 dark:bg-gray-800 bg-opacity-50 shadow-2xl shadow-gray-600/10">
+        <h1 class="text-center text-white absolute inset-0 flex items-center justify-center p-5">
+          SIGAD
+        </h1>
+        <p class="text-left text-white hidden-text absolute inset-0 flex items-center justify-center p-8 bg-black bg-opacity-70 rounded-3xl text-sm ">
+          SOFTWARE ESPECIALIZADO EN EL PROCESO DE RADICACIÓN DE LA DOCUMENTACIÓN INTERNA Y EXTERNA (FÍSICA Y ELECTRÓNICA) QUE PERMITE LA ASIGNACIÓN Y ENVIÓ DEL DOCUMENTO DIGITALIZADO A LA DEPENDENCIA CORRESPONDIENTE, MANEJANDO PRIORIDADES, ESTABLECIENDO ALERTAS DE TAL FORMA QUE LA OFICINA RECEPTORA CONOZCA INMEDIATAMENTE LA LLEGADA DE UN NUEVO DOCUMENTO Y CON ALARMAS CONSTANTES DE ACUERDO A LA PRIORIDAD DEL MISMO.
+        </p>
+        <div class="relative overflow-hidden rounded-xl">
+          <img src="/images/services/3.jpg"
+          alt="art cover" loading="lazy" width="1000" height="667" class="h-64 w-full object-cover object-top transition duration-500 group-hover:scale-105"/>
+        </div>
+      </div>
+      <div data-aos="flip-up" class="group relative p-6 sm:p-8 rounded-3xl bg-white border border-gray-100 dark:shadow-none dark:border-gray-700 dark:bg-gray-800 bg-opacity-50 shadow-2xl shadow-gray-600/10">
+        <h1 class="text-center text-white absolute inset-0 flex items-center justify-center p-5">
+          SIGAD
+        </h1>
+        <p class="text-left text-white hidden-text absolute inset-0 flex items-center justify-center p-8 bg-black bg-opacity-70 rounded-3xl text-sm ">
+          SOFTWARE ESPECIALIZADO EN EL PROCESO DE RADICACIÓN DE LA DOCUMENTACIÓN INTERNA Y EXTERNA (FÍSICA Y ELECTRÓNICA) QUE PERMITE LA ASIGNACIÓN Y ENVIÓ DEL DOCUMENTO DIGITALIZADO A LA DEPENDENCIA CORRESPONDIENTE, MANEJANDO PRIORIDADES, ESTABLECIENDO ALERTAS DE TAL FORMA QUE LA OFICINA RECEPTORA CONOZCA INMEDIATAMENTE LA LLEGADA DE UN NUEVO DOCUMENTO Y CON ALARMAS CONSTANTES DE ACUERDO A LA PRIORIDAD DEL MISMO.
+        </p>
+        <div class="relative overflow-hidden rounded-xl">
+          <img src="/images/services/4.jpg"
+          alt="art cover" loading="lazy" width="1000" height="667" class="h-64 w-full object-cover object-top transition duration-500 group-hover:scale-105"/>
+        </div>
+      </div>
+      <div data-aos="flip-up" class="group relative p-6 sm:p-8 rounded-3xl bg-white border border-gray-100 dark:shadow-none dark:border-gray-700 dark:bg-gray-800 bg-opacity-50 shadow-2xl shadow-gray-600/10">
+        <h1 class="text-center text-white absolute inset-0 flex items-center justify-center p-5">
+          SIGAD
+        </h1>
+        <p class="text-left text-white hidden-text absolute inset-0 flex items-center justify-center p-8 bg-black bg-opacity-70 rounded-3xl text-sm ">
+          SOFTWARE ESPECIALIZADO EN EL PROCESO DE RADICACIÓN DE LA DOCUMENTACIÓN INTERNA Y EXTERNA (FÍSICA Y ELECTRÓNICA) QUE PERMITE LA ASIGNACIÓN Y ENVIÓ DEL DOCUMENTO DIGITALIZADO A LA DEPENDENCIA CORRESPONDIENTE, MANEJANDO PRIORIDADES, ESTABLECIENDO ALERTAS DE TAL FORMA QUE LA OFICINA RECEPTORA CONOZCA INMEDIATAMENTE LA LLEGADA DE UN NUEVO DOCUMENTO Y CON ALARMAS CONSTANTES DE ACUERDO A LA PRIORIDAD DEL MISMO.
+        </p>
+        <div class="relative overflow-hidden rounded-xl">
+          <img src="/images/services/5.jpg"
+          alt="art cover" loading="lazy" width="1000" height="667" class="h-64 w-full object-cover object-top transition duration-500 group-hover:scale-105"/>
+        </div>
+      </div>
+      <div data-aos="flip-up" class="group relative p-6 sm:p-8 rounded-3xl bg-white border border-gray-100 dark:shadow-none dark:border-gray-700 dark:bg-gray-800 bg-opacity-50 shadow-2xl shadow-gray-600/10">
+        <h1 class="text-center text-white absolute inset-0 flex items-center justify-center p-5">
+          SIGAD
+        </h1>
+        <p class="text-left text-white hidden-text absolute inset-0 flex items-center justify-center p-8 bg-black bg-opacity-70 rounded-3xl text-sm ">
+          SOFTWARE ESPECIALIZADO EN EL PROCESO DE RADICACIÓN DE LA DOCUMENTACIÓN INTERNA Y EXTERNA (FÍSICA Y ELECTRÓNICA) QUE PERMITE LA ASIGNACIÓN Y ENVIÓ DEL DOCUMENTO DIGITALIZADO A LA DEPENDENCIA CORRESPONDIENTE, MANEJANDO PRIORIDADES, ESTABLECIENDO ALERTAS DE TAL FORMA QUE LA OFICINA RECEPTORA CONOZCA INMEDIATAMENTE LA LLEGADA DE UN NUEVO DOCUMENTO Y CON ALARMAS CONSTANTES DE ACUERDO A LA PRIORIDAD DEL MISMO.
+        </p>
+        <div class="relative overflow-hidden rounded-xl">
+          <img src="/images/services/6.jpg"
+          alt="art cover" loading="lazy" width="1000" height="667" class="h-64 w-full object-cover object-top transition duration-500 group-hover:scale-105"/>
+        </div>
+      </div>
+      <div data-aos="flip-up" class="group relative p-6 sm:p-8 rounded-3xl bg-white border border-gray-100 dark:shadow-none dark:border-gray-700 dark:bg-gray-800 bg-opacity-50 shadow-2xl shadow-gray-600/10">
+        <h1 class="text-center text-white absolute inset-0 flex items-center justify-center p-5">
+          SIGAD
+        </h1>
+        <p class="text-left text-white hidden-text absolute inset-0 flex items-center justify-center p-8 bg-black bg-opacity-70 rounded-3xl text-sm ">
+          SOFTWARE ESPECIALIZADO EN EL PROCESO DE RADICACIÓN DE LA DOCUMENTACIÓN INTERNA Y EXTERNA (FÍSICA Y ELECTRÓNICA) QUE PERMITE LA ASIGNACIÓN Y ENVIÓ DEL DOCUMENTO DIGITALIZADO A LA DEPENDENCIA CORRESPONDIENTE, MANEJANDO PRIORIDADES, ESTABLECIENDO ALERTAS DE TAL FORMA QUE LA OFICINA RECEPTORA CONOZCA INMEDIATAMENTE LA LLEGADA DE UN NUEVO DOCUMENTO Y CON ALARMAS CONSTANTES DE ACUERDO A LA PRIORIDAD DEL MISMO.
+        </p>
+        <div class="relative overflow-hidden rounded-xl">
+          <img src="/images/services/7.jpg"
+          alt="art cover" loading="lazy" width="1000" height="667" class="h-64 w-full object-cover object-top transition duration-500 group-hover:scale-105"/>
+        </div>
+      </div>
+    </div>
+  </Container>
+</div>
