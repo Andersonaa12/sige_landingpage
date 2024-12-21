@@ -1,0 +1,146 @@
+  :root {
+    --color-primary: #09CED3;
+    --bg-primary: rgb(9, 206, 211);
+    --bg-primary-opacity-10: rgba(9, 206, 211, 0.1);
+  }
+  .btn-primary {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+  
+  .text-primary {
+    color: var(--color-primary);
+  }
+
+  .bg-primary {
+    background-color: var(--bg-primary);
+  }
+
+  .before\:bg-primary::before {
+    content: '';
+    display: block;
+    background-color: var(--bg-primary);
+    width: 100%;
+    height: 100%;
+  }
+
+  .before\:bg-primary\/10::before {
+    content: '';
+    display: block;
+    background-color: var(--bg-primary-opacity-10);
+    width: 100%;
+    height: 100%;
+  }
+
+  .hover\:text-primary:hover {
+    color: var(--color-primary);
+  }
+
+  .from-primary {
+    from: var(--color-primary);
+  }
+
+  .dark .text-primary {
+    color: white;
+  }
+
+  .dark .bg-primary {
+    background-color: #09162f;
+  }
+
+  .dark .before\:bg-primary::before {
+    background-color: #09162f;
+  }
+
+  .dark .before\:bg-primary\/10::before {
+    background-color: rgba(9, 206, 211, 0.1);
+  }
+
+  .dark .hover\:text-primary:hover {
+    color: white;
+  }
+
+  .modal {
+    display: none;
+  }
+
+  .modal:not(.hidden) {
+    display: flex;
+  }
+
+  .modal-bg {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+  }
+
+  .modal img {
+    max-height: 200px;
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+
+  :root {
+    --color-primary: #09CED3; 
+    --bg-primary: rgb(9, 206, 211);
+    --bg-primary-opacity-10: rgba(9, 206, 211, 0.1);
+  }
+  .before\:bg-primary::before {
+    content: '';
+    display: block;
+    background-color: var(--bg-primary);
+    width: 100%; 
+    height: 100%;
+  }
+  
+  .before\:bg-primary\/10::before {
+    content: '';
+    display: block;
+    background-color: var(--bg-primary-opacity-10);
+    width: 100%;
+    height: 100%; 
+  }
+  .dark .hover\:text-primary:hover {
+    color: white; 
+  }
+  .hidden-text {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 10; 
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+  }
+  .group:hover .hidden-text {
+    opacity: 1;
+  }
+  .group {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  .group img {
+    transition: transform 0.3s ease-in-out;
+  }
+  .group:hover img {
+    transform: scale(1.1); 
+  }

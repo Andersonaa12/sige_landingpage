@@ -1,98 +1,7 @@
 ---
 import Container from "./Container.astro"
 ---
-
-<style>
-  :root {
-    --color-primary: #09CED3;
-    --bg-primary: rgb(9, 206, 211);
-    --bg-primary-opacity-10: rgba(9, 206, 211, 0.1);
-  }
-
-  .text-primary {
-    color: var(--color-primary);
-  }
-
-  .bg-primary {
-    background-color: var(--bg-primary);
-  }
-
-  .before\:bg-primary::before {
-    content: '';
-    display: block;
-    background-color: var(--bg-primary);
-    width: 100%;
-    height: 100%;
-  }
-
-  .before\:bg-primary\/10::before {
-    content: '';
-    display: block;
-    background-color: var(--bg-primary-opacity-10);
-    width: 100%;
-    height: 100%;
-  }
-
-  .hover\:text-primary:hover {
-    color: var(--color-primary);
-  }
-
-  .from-primary {
-    from: var(--color-primary);
-  }
-
-  .dark .text-primary {
-    color: white;
-  }
-
-  .dark .bg-primary {
-    background-color: #09162f;
-  }
-
-  .dark .before\:bg-primary::before {
-    background-color: #09162f;
-  }
-
-  .dark .before\:bg-primary\/10::before {
-    background-color: rgba(9, 206, 211, 0.1);
-  }
-
-  .dark .hover\:text-primary:hover {
-    color: white;
-  }
-
-  /* Estilos para los modales */
-  .modal {
-    display: none;
-  }
-
-  .modal:not(.hidden) {
-    display: flex;
-  }
-
-  .modal-bg {
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-
-  .modal-content {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    position: relative;
-    text-align: center;
-  }
-
-  .modal img {
-    max-height: 200px;
-  }
-
-  .modal-close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-  }
-</style>
+<link rel="stylesheet" href="/images/styles/main.css">
 
 <div class="relative" id="home">
     <Container>
@@ -101,37 +10,38 @@ import Container from "./Container.astro"
             <h1 class="text-gray-900 dark:text-white font-bold text-5xl md:text-6xl xl:text-7xl">
               Sistemas de información para la gestión empresarial <span class="text-primary dark:text-white">SIGE.</span>
             </h1>
-            <p class="mt-8 text-gray-700 dark:text-gray-300">Identificación de las necesidades del cliente en todos sus componentes para buscar su satisfacción!</p>
+            <p class="mt-8 text-gray-700 dark:text-gray-300">Identificamos de las necesidades del cliente en todos sus componentes para buscar su satisfacción!</p>
 
-            <div class="mt-12 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 text-center">
+            <div class="mt-12 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 text-center border p-2 rounded-xl bg-gradient-to-r" style="--tw-gradient-from: white; --tw-gradient-to: var(--bg-primary); --tw-shadow-color: var(--bg-primary); border-color: var(--bg-primary); box-shadow: 0 4px 6px -1px var(--bg-primary), 0 2px 4px -2px var(--bg-primary)">
+
               <div id="logo-alcala" class="p-4 grayscale transition duration-200 hover:grayscale-0 cursor-pointer" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
-                <img src="https://ventanilla.sige.com.co/img/alcalaok.png" class="h-24 w-auto mx-auto" alt="client logo" />
-                <p class="mt-2 text-gray-700 dark:text-white">Alcaldia de Alcala</p>
+                <img src="/images/entidades/alcala.png" class="h-24 w-auto mx-auto" alt="client logo" />
+                <p class="mt-2 text-gray-700 dark:text-white">Municipio de Alcala</p>
               </div>
 
               <div id="logo-anserma" class="p-4 grayscale transition duration-200 hover:grayscale-0 cursor-pointer" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
-                <img src="https://ventanilla.sige.com.co/img/anserma.gif" class="h-24 w-auto mx-auto" alt="client logo" />
-                <p class="mt-2 text-gray-700 dark:text-white">Alcaldia de Anserma</p>
+                <img src="/images/entidades/anserma.gif" class="h-24 w-auto mx-auto" alt="client logo" />
+                <p class="mt-2 text-gray-700 dark:text-white">Municipio de Anserma</p>
               </div>
 
               <div id="logo-cartago" class="p-4 grayscale transition duration-200 hover:grayscale-0 cursor-pointer" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
-                <img src="https://ventanilla.sige.com.co/img/cartago.png" class="h-24 w-auto mx-auto" alt="client logo" />
-                <p class="mt-2 text-gray-700 dark:text-white">Alcaldia de Cartago</p>
+                <img src="/images/entidades/cartago.png" class="h-24 w-auto mx-auto" alt="client logo" />
+                <p class="mt-2 text-gray-700 dark:text-white">Municipio de Cartago</p>
               </div>
 
               <div id="logo-union" class="p-4 grayscale transition duration-200 hover:grayscale-0 cursor-pointer" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
-                <img src="https://ventanilla.sige.com.co/img/union.gif" class="h-24 w-auto mx-auto" alt="client logo" />
-                <p class="mt-2 text-gray-700 dark:text-white">Alcaldia de la Union</p>
+                <img src="/images/entidades/union.gif" class="h-24 w-auto mx-auto" alt="client logo" />
+                <p class="mt-2 text-gray-700 dark:text-white">Municipio de la Union</p>
               </div>
 
               <div id="logo-obando" class="p-4 grayscale transition duration-200 hover:grayscale-0 cursor-pointer" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
-                <img src="https://ventanilla.sige.com.co/img/obando.svg" class="h-24 w-auto mx-auto" alt="client logo" />
-                <p class="mt-2 text-gray-700 dark:text-white">Alcaldia de Obando</p>
+                <img src="/images/entidades/obando.svg" class="h-24 w-auto mx-auto" alt="client logo" />
+                <p class="mt-2 text-gray-700 dark:text-white">Municipio de Obando</p>
               </div>
 
               <div id="logo-roldanillo" class="p-4 grayscale transition duration-200 hover:grayscale-0 cursor-pointer" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
-                <img src="https://ventanilla.sige.com.co/img/roldanillo1.jpg" class="h-24 w-auto mx-auto" alt="client logo" />
-                <p class="mt-2 text-gray-700 dark:text-white">Alcaldia de Roldanillo</p>
+                <img src="/images/entidades/roldanillo.jpg" class="h-24 w-auto mx-auto" alt="client logo" />
+                <p class="mt-2 text-gray-700 dark:text-white">Municipio de Roldanillo</p>
               </div>
               
             </div>
@@ -141,81 +51,216 @@ import Container from "./Container.astro"
 
     <!-- Modals -->
     <div id="modal-alcala" class="modal hidden fixed inset-0 flex items-center justify-center modal-bg" onclick="closeModal('modal-alcala')">
-      <div class="modal-content" onclick="event.stopPropagation()">
-        <span class="modal-close" onclick="closeModal('modal-alcala')">X</span>
-        <img src="https://ventanilla.sige.com.co/img/alcalaok.png" alt="Alcaldia de Alcala">
-        <p>Alcaldia de Alcala</p>
+      <div class="modal-content w-3/4 h-3/4 max-w-5xl max-h-screen overflow-y-auto p-8" onclick="event.stopPropagation()">
+        <span class="modal-close bg-red-600 px-2 rounded-lg text-white" onclick="closeModal('modal-alcala')">X</span>
+        <p class="font-bold border-b border-blue-300 pb-2">Seleccione una entidad</p>
+        <a href="https://vutv2.alcala.documentosige.com.co/?ent=19" class="p-5 " target="_blank">
+          <div class="shadow-lg p-4 rounded-lg mt-3 transform hover:scale-105 transition duration-300 border-blue-300 border">
+
+            <p class="p-2 bg-primary rounded-lg text-white font-bold">SISTEMA INTEGRADO DE GESTION Y ADMINISTRACION DE DOCUMENTOS – SIGAD</p>
+            <img src="/images/entidades/alcala.png" alt="Alcaldia de Alcala"  class="mx-auto w-48 h-auto block mt-4">
+            <p class="font-bold mt-2">Alcaldia de Alcala</p>
+          </div>
+        </a>
+        <a href="https://vtu.documentosige.com.co/?ent=19" class="p-5 " target="_blank">
+          <div class="shadow-lg p-4 rounded-lg mt-3 transform hover:scale-105 transition duration-300 border-blue-300 border">
+
+            <p class="p-2 bg-primary rounded-lg text-white font-bold">SISTEMA INTEGRADO DE GESTION Y ADMINISTRACION DE DOCUMENTOS – SIGAD V1</p>
+            <img src="/images/entidades/alcala.png" alt="Alcaldia de Alcala"  class="mx-auto w-48 h-auto block mt-4">
+            <p class="font-bold mt-2">Alcaldia de Alcala</p>
+          </div>
+        </a>
+        <a href="https://vutv2.alcala.documentosige.com.co/?ent=38" class="p-5 " target="_blank">
+          <div class="shadow-lg p-4 rounded-lg mt-3 transform hover:scale-105 transition duration-300 border-blue-300 border">
+
+            <p class="p-2 bg-primary rounded-lg text-white font-bold">SISTEMA INTEGRADO DE GESTION Y ADMINISTRACION DE DOCUMENTOS – SIGAD </p>
+            <img src="/images/entidades/hsanvicente.png" alt="Alcaldia de Alcala"  class="mx-auto w-48 h-auto block mt-4">
+            <p class="font-bold mt-2">Hospital San Vicelte de Paul</p>
+          </div>
+        </a>
       </div>
     </div>
-
+    
     <div id="modal-anserma" class="modal hidden fixed inset-0 flex items-center justify-center modal-bg" onclick="closeModal('modal-anserma')">
-      <div class="modal-content" onclick="event.stopPropagation()">
-        <span class="modal-close" onclick="closeModal('modal-anserma')">X</span>
-        <img src="https://ventanilla.sige.com.co/img/anserma.gif" alt="Alcaldia de Anserma">
-        <p>Alcaldia de Anserma</p>
+      <div class="modal-content w-3/4 h-3/4 max-w-5xl max-h-screen overflow-y-auto p-8" onclick="event.stopPropagation()">
+        <span class="modal-close bg-red-600 px-2 rounded-lg text-white" onclick="closeModal('modal-anserma')">X</span>
+        <a href="https://vutanserma.documentosige.com.co/" class="p-5 " target="_blank">
+          <div class="shadow-lg p-4 rounded-lg mt-3 transform hover:scale-105 transition duration-300 border-blue-300 border">
+
+            <p class="p-2 bg-primary rounded-lg text-white font-bold">SISTEMA INTEGRADO DE GESTION Y ADMINISTRACION DE DOCUMENTOS – SIGAD</p>
+            <img src="/images/entidades/anserma.gif" alt="Alcaldia de Alcala"  class="mx-auto w-26 h-auto block mt-4">
+            <p class="font-bold mt-2">Alcaldia de Anserma</p>
+          </div>
+        </a>
+        <a href="https://vutansermav1.documentosige.com.co/" class="p-5 " target="_blank">
+          <div class="shadow-lg p-4 rounded-lg mt-3 transform hover:scale-105 transition duration-300 border-blue-300 border">
+
+            <p class="p-2 bg-primary rounded-lg text-white font-bold">SISTEMA INTEGRADO DE GESTION Y ADMINISTRACION DE DOCUMENTOS – SIGAD V1</p>
+            <img src="/images/entidades/anserma.gif" alt="Alcaldia de Alcala"  class="mx-auto w-26 h-auto block mt-4">
+            <p class="font-bold mt-2">Alcaldia de Anserma</p>
+          </div>
+        </a>
       </div>
     </div>
 
     <div id="modal-cartago" class="modal hidden fixed inset-0 flex items-center justify-center modal-bg" onclick="closeModal('modal-cartago')">
-      <div class="modal-content" onclick="event.stopPropagation()">
-        <span class="modal-close" onclick="closeModal('modal-cartago')">X</span>
-        <img src="https://ventanilla.sige.com.co/img/cartago.png" alt="Alcaldia de Cartago">
-        <p>Alcaldia de Cartago</p>
+      <div class="modal-content w-3/4 h-3/4 max-w-5xl max-h-screen overflow-y-auto p-8" onclick="event.stopPropagation()">
+        <span class="modal-close bg-red-600 px-2 rounded-lg text-white" onclick="closeModal('modal-cartago')">X</span>
+        <a href="https://vtu.documentosige.com.co/?ent=29" class="p-5 " target="_blank">
+          <div class="shadow-lg p-4 rounded-lg mt-3 transform hover:scale-105 transition duration-300 border-blue-300 border">
+
+            <p class="p-2 bg-primary rounded-lg text-white font-bold">SISTEMA INTEGRADO DE GESTION Y ADMINISTRACION DE DOCUMENTOS – SIGAD</p>
+            <img src="/images/entidades/holguin.jpg" alt="Alcaldia de Alcala"  class="mx-auto w-48 h-auto block mt-4">
+            <p class="font-bold mt-2">Institución Educativa ANTONIO HOLGUÍN GARCÉS</p>
+          </div>
+        </a>
+        <a href="https://vutanserma.documentosige.com.co/?ent=49" class="p-5 " target="_blank">
+          <div class="shadow-lg p-4 rounded-lg mt-3 transform hover:scale-105 transition duration-300 border-blue-300 border">
+
+            <p class="p-2 bg-primary rounded-lg text-white font-bold">SISTEMA INTEGRADO DE GESTION Y ADMINISTRACION DE DOCUMENTOS – SIGAD</p>
+            <img src="/images/entidades/fonpacifico.png" alt="Alcaldia de Alcala"  class="mx-auto w-48 h-auto block mt-4">
+            <p class="font-bold mt-2">Fonpacifico</p>
+          </div>
+        </a>
+        <a href="https://vtu.sige.com.co/?ent=3" class="p-5 " target="_blank">
+          <div class="shadow-lg p-4 rounded-lg mt-3 transform hover:scale-105 transition duration-300 border-blue-300 border">
+
+            <p class="p-2 bg-primary rounded-lg text-white font-bold">SISTEMA INTEGRADO DE GESTION Y ADMINISTRACION DE DOCUMENTOS – SIGAD </p>
+            <img src="/images/entidades/sige.png" alt="Alcaldia de Alcala"  class="mx-auto w-48 h-auto block mt-4">
+            <p class="font-bold mt-2">SIGECOM</p>
+          </div>
+        </a>
+        <a href="https://vutanserma.documentosige.com.co/?ent=49" class="p-5 " target="_blank">
+          <div class="shadow-lg p-4 rounded-lg mt-3 transform hover:scale-105 transition duration-300 border-blue-300 border">
+
+            <p class="p-2 bg-primary rounded-lg text-white font-bold">SISTEMA INTEGRADO DE GESTION Y ADMINISTRACION DE DOCUMENTOS – SIGAD </p>
+            <img src="/images/entidades/prueba.jpg" alt="Alcaldia de Alcala"  class="mx-auto w-48 h-auto block mt-4">
+            <p class="font-bold mt-2">Empresa de Prueba</p>
+          </div>
+        </a>
       </div>
     </div>
 
     <div id="modal-union" class="modal hidden fixed inset-0 flex items-center justify-center modal-bg" onclick="closeModal('modal-union')">
-      <div class="modal-content" onclick="event.stopPropagation()">
-        <span class="modal-close" onclick="closeModal('modal-union')">X</span>
-        <img src="https://ventanilla.sige.com.co/img/union.gif" alt="Alcaldia de la Union">
-        <p>Alcaldia de la Union</p>
+      <div class="modal-content w-3/4 h-3/4 max-w-5xl max-h-screen overflow-y-auto p-8" onclick="event.stopPropagation()">
+        <span class="modal-close bg-red-600 px-2 rounded-lg text-white" onclick="closeModal('modal-union')">X</span>
+        <a href="https://sigvtu.documentosige.com.co/?ent=14" class="p-5 " target="_blank">
+          <div class="shadow-lg p-4 rounded-lg mt-3 transform hover:scale-105 transition duration-300 border-blue-300 border">
+
+            <p class="p-2 bg-primary rounded-lg text-white font-bold">SISTEMA INTEGRADO DE GESTION Y ADMINISTRACION DE DOCUMENTOS – SIGAD</p>
+            <img src="/images/entidades/union.gif" alt="Alcaldia de Alcala"  class="mx-auto w-48 h-auto block mt-4">
+            <p class="font-bold mt-2">Alcaldia de la Unión</p>
+          </div>
+        </a>
+        <a href="https://vtu.documentosige.com.co/?ent=23" class="p-5 " target="_blank">
+          <div class="shadow-lg p-4 rounded-lg mt-3 transform hover:scale-105 transition duration-300 border-blue-300 border">
+
+            <p class="p-2 bg-primary rounded-lg text-white font-bold">SISTEMA INTEGRADO DE GESTION Y ADMINISTRACION DE DOCUMENTOS – SIGAD V1</p>
+            <img src="/images/entidades/union.gif" alt="Alcaldia de Alcala"  class="mx-auto w-48 h-auto block mt-4">
+            <p class="font-bold mt-2">Alcaldia de la Unión</p>
+          </div>
+        </a>
+        <a href="https://www.meci.sige.com.co/index.php/Mecicontrol" class="p-5 " target="_blank">
+          <div class="shadow-lg p-4 rounded-lg mt-3 transform hover:scale-105 transition duration-300 border-blue-300 border">
+
+            <p class="p-2 bg-primary rounded-lg text-white font-bold">SISTEMA INTEGRADO DE GESTION Y ADMINISTRACION DE DOCUMENTOS – MECI </p>
+            <img src="/images/entidades/inviunion.jpeg" alt="Alcaldia de Alcala"  class="mx-auto w-48 h-auto block mt-4">
+            <p class="font-bold mt-2">INVIUNION</p>
+          </div>
+        </a>
+        <a href="https://vtu.documentosige.com.co/?ent=31" class="p-5 " target="_blank">
+          <div class="shadow-lg p-4 rounded-lg mt-3 transform hover:scale-105 transition duration-300 border-blue-300 border">
+
+            <p class="p-2 bg-primary rounded-lg text-white font-bold">SISTEMA INTEGRADO DE GESTION Y ADMINISTRACION DE DOCUMENTOS – SIGAD </p>
+            <img src="/images/entidades/concejo.jpg" alt="Alcaldia de Alcala"  class="mx-auto w-48 h-auto block mt-4">
+            <p class="font-bold mt-2">Consejo Municipal</p>
+          </div>
+        </a>
       </div>
     </div>
 
     <div id="modal-obando" class="modal hidden fixed inset-0 flex items-center justify-center modal-bg" onclick="closeModal('modal-obando')">
-      <div class="modal-content" onclick="event.stopPropagation()">
-        <span class="modal-close" onclick="closeModal('modal-obando')">X</span>
-        <img src="https://ventanilla.sige.com.co/img/obando.svg" alt="Alcaldia de Obando">
-        <p>Alcaldia de Obando</p>
-      </div>
-    </div>
+      <div class="modal-content w-3/4 h-3/4 max-w-5xl max-h-screen overflow-y-auto p-8" onclick="event.stopPropagation()">
+        <span class="modal-close bg-red-600 px-2 rounded-lg text-white" onclick="closeModal('modal-obando')">X</span>
+        <a href="https://vutv2.alcala.documentosige.com.co/?ent=40" class="p-5 " target="_blank">
+          <div class="shadow-lg p-4 rounded-lg mt-3 transform hover:scale-105 transition duration-300 border-blue-300 border">
 
-    <div id="modal-roldanillo" class="modal hidden fixed inset-0 flex items-center justify-center modal-bg" onclick="closeModal('modal-roldanillo')">
-      <div class="modal-content" onclick="event.stopPropagation()">
-        <span class="modal-close" onclick="closeModal('modal-roldanillo')">X</span>
-        <img src="https://ventanilla.sige.com.co/img/roldanillo1.jpg" alt="Alcaldia de Roldanillo">
-        <p>Alcaldia de Roldanillo</p>
+            <p class="p-2 bg-primary rounded-lg text-white font-bold">SISTEMA INTEGRADO DE GESTION Y ADMINISTRACION DE DOCUMENTOS – SIGAD </p>
+            <img src="/images/entidades/obando.svg" alt="Alcaldia de Alcala"  class="mx-auto w-48 h-auto block mt-4">
+            <p class="font-bold mt-2">Alcaldia de Obando</p>
+          </div>
+        </a>
       </div>
     </div>
+    
+    <div id="modal-roldanillo" class="modal hidden fixed inset-0 flex items-center justify-center modal-bg" onclick="closeModal('modal-roldanillo')">
+      <div class="modal-content w-3/4 h-3/4 max-w-5xl max-h-screen overflow-y-auto p-8" onclick="event.stopPropagation()">
+        <span class="modal-close bg-red-600 px-2 rounded-lg text-white cursor-pointer" onclick="closeModal('modal-roldanillo')">X</span>
+        <a href="https://sigv2roldanillo.documentosige.com.co/?ent=38" class="p-5 " target="_blank">
+          <div class="shadow-lg p-4 rounded-lg mt-3 transform hover:scale-105 transition duration-300 border-blue-300 border">
+
+            <p class="p-2 bg-primary rounded-lg text-white font-bold">SISTEMA INTEGRADO DE GESTION Y ADMINISTRACION DE DOCUMENTOS – SIGAD </p>
+            <img src="/images/entidades/roldanillo.jpg" alt="Alcaldia de Alcala"  class="mx-auto w-48 h-auto block mt-4">
+            <p class="font-bold mt-2">Alcaldia de Roldanillo</p>
+          </div>
+        </a>
+        <a href="https://sig.serviciospublicosroldanillo.documentosige.com.co/?ent=36" class="p-5 " target="_blank">
+          <div class="shadow-lg p-4 rounded-lg mt-3 transform hover:scale-105 transition duration-300 border-blue-300 border">
+
+            <p class="p-2 bg-primary rounded-lg text-white font-bold">SISTEMA INTEGRADO DE GESTION Y ADMINISTRACION DE DOCUMENTOS – SIGAD </p>
+            <img src="/images/entidades/roldaemp.jpg" alt="Alcaldia de Alcala"  class="mx-auto w-48 h-auto block mt-4">
+            <p class="font-bold mt-2">Empresa de Servicios Publicos de Roldanillo</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    
 
     <script>
-      // Funciones para abrir y cerrar modales
+      // Función para abrir el modal
       function openModal(modalId) {
-        document.getElementById(modalId).classList.remove('hidden');
+        const modal = document.getElementById(modalId);
+        if (modal) {
+          modal.classList.remove('hidden');
+        }
       }
-
+    
+      // Función para cerrar el modal
       function closeModal(modalId) {
-        document.getElementById(modalId).classList.add('hidden');
+        const modal = document.getElementById(modalId);
+        if (modal) {
+          modal.classList.add('hidden');
+        }
       }
-
-      // Añadir eventos de clic a los logos
-      document.getElementById('logo-alcala').addEventListener('click', function() {
-        openModal('modal-alcala');
+    
+      // Añadir eventos de clic a los logos y asignar modales dinámicamente
+      const logos = [
+        { id: 'logo-alcala', modal: 'modal-alcala' },
+        { id: 'logo-anserma', modal: 'modal-anserma' },
+        { id: 'logo-cartago', modal: 'modal-cartago' },
+        { id: 'logo-union', modal: 'modal-union' },
+        { id: 'logo-obando', modal: 'modal-obando' },
+        { id: 'logo-roldanillo', modal: 'modal-roldanillo' },
+      ];
+    
+      logos.forEach(({ id, modal }) => {
+        const logo = document.getElementById(id);
+        if (logo) {
+          logo.addEventListener('click', () => openModal(modal));
+        }
       });
-      document.getElementById('logo-anserma').addEventListener('click', function() {
-        openModal('modal-anserma');
-      });
-      document.getElementById('logo-cartago').addEventListener('click', function() {
-        openModal('modal-cartago');
-      });
-      document.getElementById('logo-union').addEventListener('click', function() {
-        openModal('modal-union');
-      });
-      document.getElementById('logo-obando').addEventListener('click', function() {
-        openModal('modal-obando');
-      });
-      document.getElementById('logo-roldanillo').addEventListener('click', function() {
-        openModal('modal-roldanillo');
+    
+      // Añadir funcionalidad para cerrar modales al hacer clic en el fondo o la "X"
+      document.querySelectorAll('.modal').forEach((modal) => {
+        modal.addEventListener('click', (event) => {
+          if (event.target === modal) {
+            closeModal(modal.id);
+          }
+        });
+        modal.querySelector('.modal-close').addEventListener('click', () => {
+          closeModal(modal.id);
+        });
       });
     </script>
+    
 </div>

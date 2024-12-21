@@ -2,66 +2,7 @@
 import Container from "./Container.astro"
 
 ---
-<style>
-  :root {
-    --color-primary: #09CED3; /* Color hexadecimal */
-    --bg-primary: rgb(9, 206, 211); /* Color RGB */
-    --bg-primary-opacity-10: rgba(9, 206, 211, 0.1); /* Color RGBA con 10% de opacidad */
-  }
-  
-  .text-primary {
-    color: var(--color-primary);
-  }
-  
-  .bg-primary {
-    background-color: var(--bg-primary);
-  }
-  
-  .before\:bg-primary::before {
-    content: '';
-    display: block;
-    background-color: var(--bg-primary);
-    width: 100%; /* Ajusta según sea necesario */
-    height: 100%; /* Ajusta según sea necesario */
-  }
-  
-  .before\:bg-primary\/10::before {
-    content: '';
-    display: block;
-    background-color: var(--bg-primary-opacity-10);
-    width: 100%; /* Ajusta según sea necesario */
-    height: 100%; /* Ajusta según sea necesario */
-  }
-  
-  .hover\:text-primary:hover {
-    color: var(--color-primary);
-  }
-  
-  .from-primary {
-    from: var(--color-primary);
-  }
-  
-  /* Ajustes específicos para temas oscuros */
-  .dark .text-primary {
-    color: white; /* Color de texto blanco en temas oscuros */
-  }
-  
-  .dark .bg-primary {
-    background-color: #09162f; /* Ejemplo de color de fondo oscuro */
-  }
-  
-  .dark .before\:bg-primary::before {
-    background-color: #09162f; /* Ejemplo de color de fondo oscuro */
-  }
-  
-  .dark .before\:bg-primary\/10::before {
-    background-color: rgba(9, 206, 211, 0.1); /* Color RGBA con 10% de opacidad en tema oscuro */
-  }
-  
-  .dark .hover\:text-primary:hover {
-    color: white; /* Color de texto blanco en temas oscuros */
-  }
-</style>
+
 
 <div class="relative py-4">
   <div aria-hidden="true" class="absolute inset-0 h-max w-full m-auto grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20">
@@ -72,18 +13,6 @@ import Container from "./Container.astro"
     <div class="relative">
       <div class="mt-6 m-auto space-y-6 md:w-8/12 lg:w-7/12">
         <h1 class="text-center text-4xl font-bold text-gray-800 dark:text-white md:text-5xl">Nuestros Servicios</h1>
-        
-        <div class="flex flex-wrap justify-center gap-6 mb-3">
-          <a
-              href="#"
-              class="relative flex h-12 w-full items-center justify-center px-8 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"
-            >
-              <span class="relative text-base font-semibold text-white dark:text-dark"
-                >Contactanos</span
-              >
-            </a>
-          </a>
-        </div>
       </div>
     </div>
   </Container>

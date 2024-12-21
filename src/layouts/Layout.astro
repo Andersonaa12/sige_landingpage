@@ -1,38 +1,39 @@
 ---
-import AppFooter from "../components/AppFooter.astro";
-import AppHeader from "../components/AppHeader.astro"
+import Stats from '../components/Stats.astro';
+import Features from '../components/Features.astro';
+import HeroSection from '../components/HeroSection.astro';
+import Layout from '../layouts/Layout.astro';
+import Testimonials from '../components/Testimonials.astro';
+import CallToAction from '../components/CallToAction.astro';
+import Blog from '../components/Blog.astro';
+import "aos/dist/aos.css";
+import Contact from '../components/Contact.astro';
 ---
 
-
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<meta name="description" content="SIGE">
-		<title>SIGE</title>
-
-		<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet">
-	</head>
-	
-	<body class="bg-white dark:bg-gray-900">
-		<AppHeader/>
-		<slot />
-		<AppFooter/>
-	</body>
+<Layout title="Bienvenido a SIGE.">
+	<div id="loader">
+		<img src="/images/entidades/logosicon.png" alt="Cargando..." />
+	</div>
+	<main class="space-y-8 mb-8 hidden">
+		<HeroSection/>
+		<Features/>
+		<Stats/>
+		<Testimonials/>
+		<CallToAction/> 
+		<Blog/>
+		<Contact/>
+	</main>
 	<script>
-		document.documentElement.removeAttribute('data-theme');
-	</script>
-</html>
-<style>
-	html {
-		font-family: Urbanist, sans-serif;
-		scroll-behavior: smooth;
-	}
+		import { aosInit } from "../js/aos"; 
+		
+		// Inicialización de AOS
+		aosInit();
 
-	body {
-		margin: 0;
-	}
-</style>
+		// Loader
+		window.addEventListener('load', () => {
+			// Oculta el loader y muestra el contenido principal
+			document.getElementById('loader').style.display = 'none';
+			document.querySelector('main').classList.remove('hidden');
+		});
+	</script>
+</Layout>

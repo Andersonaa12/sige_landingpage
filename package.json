@@ -12,8 +12,7 @@
   "dependencies": {
     "aos": "^2.3.4",
     "astro": "^1.1.5",
-    "glider-js": "^1.7.9",
-    "swiper": "^11.1.4"
+    "glider-js": "^1.7.9"
   },
   "devDependencies": {
     "@astrojs/tailwind": "^1.0.0",

@@ -1,33 +1,11 @@
 ---
 import Container from "./Container.astro"
 ---
-<style>
-  .hidden-text {
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    z-index: 10; 
-    color: #fff;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-  }
-  .group:hover .hidden-text {
-    opacity: 1;
-  }
-  .group {
-    position: relative;
-    border-radius: 20px;
-    overflow: hidden;
-  }
-  .group img {
-    transition: transform 0.3s ease-in-out;
-  }
-  .group:hover img {
-    transform: scale(1.1); /* Efecto de zoom */
-  }
-  </style>
+<link rel="stylesheet" href="/images/styles/main.css">
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 <div id="blog">
   <Container>
-    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 p-5">
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-2 p-5">
       <div data-aos="flip-up" class="group relative p-6 sm:p-8 rounded-3xl bg-white border border-gray-100 dark:shadow-none dark:border-gray-700 dark:bg-gray-800 bg-opacity-50 shadow-2xl shadow-gray-600/10">
         <h1 class="text-center text-white absolute inset-0 flex items-center justify-center p-5">
           SIGAD
@@ -100,7 +78,7 @@ import Container from "./Container.astro"
           alt="art cover" loading="lazy" width="1000" height="667" class="h-64 w-full object-cover object-top transition duration-500 group-hover:scale-105"/>
         </div>
       </div>
-      <div data-aos="flip-up" class="group relative p-6 sm:p-8 rounded-3xl bg-white border border-gray-100 dark:shadow-none dark:border-gray-700 dark:bg-gray-800 bg-opacity-50 shadow-2xl shadow-gray-600/10">
+      <div data-aos="flip-up" class="group relative p-6 sm:p-8 rounded-3xl bg-white border md:col-span-2 lg:col-span-2 border-gray-100 dark:shadow-none dark:border-gray-700 dark:bg-gray-800 bg-opacity-50 shadow-2xl shadow-gray-600/10">
         <h1 class="text-center text-white absolute inset-0 flex items-center justify-center p-5">
           SIGAD
         </h1>
