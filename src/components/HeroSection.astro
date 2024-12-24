@@ -1,7 +1,7 @@
 ---
 import Container from "./Container.astro"
 ---
-<link rel="stylesheet" href="/images/styles/main.css">
+<link rel="stylesheet" href="/styles/main.css">
 
 <div class="relative" id="home">
     <Container>
@@ -219,18 +219,20 @@ import Container from "./Container.astro"
     <script>
       // Función para abrir el modal
       function openModal(modalId) {
-        const modal = document.getElementById(modalId);
-        if (modal) {
-          modal.classList.remove('hidden');
-        }
+          const modal = document.getElementById(modalId);
+          if (modal) {
+              modal.classList.remove('hidden');
+              document.body.style.overflow = 'hidden'; // Desactiva el scroll
+          }
       }
-    
+          
       // Función para cerrar el modal
       function closeModal(modalId) {
-        const modal = document.getElementById(modalId);
-        if (modal) {
-          modal.classList.add('hidden');
-        }
+          const modal = document.getElementById(modalId);
+          if (modal) {
+              modal.classList.add('hidden');
+              document.body.style.overflow = ''; // Reactiva el scroll
+          }
       }
     
       // Añadir eventos de clic a los logos y asignar modales dinámicamente

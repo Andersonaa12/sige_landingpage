@@ -3,6 +3,10 @@
     --bg-primary: rgb(9, 206, 211);
     --bg-primary-opacity-10: rgba(9, 206, 211, 0.1);
   }
+    .text-shadow-white {
+      text-shadow: 0px 0px 3px white;
+  }
+
   .btn-primary {
     background-color: var(--color-primary);
     color: white;
@@ -23,7 +27,17 @@
   .bg-primary {
     background-color: var(--bg-primary);
   }
-
+  .bg-primary-digrate {
+    background: linear-gradient(
+      to right, 
+      rgba(9, 208, 211, 0.074), /* Color inicial con opacidad completa */
+      rgb(255, 255, 255),    /* Color blanco intermedio */
+      rgba(9, 208, 211, 0.074)   /* Color final con opacidad completa */
+    );
+  }
+  
+  
+  
   .before\:bg-primary::before {
     content: '';
     display: block;
